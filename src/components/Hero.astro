@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+import BookingModal from '../components/BookingModal'
+
+---
+
+<section class="hero is-medium">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <Image src="/logo.png" alt="logo" width="480" height="480" />
+    </div>
+    <div class="is-flex is-justify-content-center">
+      <BookingModal client:load btnClassNames="is-large mt-6" />
+    </div>
+  </div>
+</section>

@@ -88,7 +88,10 @@ const Navbar = () => {
                 >
                   Extra Care
                 </a>
-                <hr className="navbar-divider" />
+                <hr
+                  className="navbar-divider"
+                  style={{ backgroundColor: "#dbdbdb" }}
+                />
                 <a className="navbar-item" onClick={() => scrollTo("policy")}>
                   Policy
                 </a>

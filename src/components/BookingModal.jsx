@@ -28,9 +28,13 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
               borderBottomRightRadius: "var(--bulma-modal-card-head-radius)",
             }}
           >
-            <ul className="ml-5 is-size-5" style={{ listStyle: "none" }}>
+            <ul className="is-size-6 mb-6" style={{ listStyle: "none" }}>
               <li className="mb-2">
-                <b>Step 1:</b> Text <b>650-580-6961</b> with:
+                <b>Step 1:</b> Text <b>650-580-6961</b> or email{" "}
+                <a href="mailto:brentonsbarkyard@gmail.com">
+                  brentonsbarkyard@gmail.com
+                </a>{" "}
+                with:
                 <ul style={{ listStyle: "inside" }} className="ml-5 is-size-6">
                   <li>Your name</li>
                   <li>Your pet's name</li>
@@ -55,6 +59,15 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
                 care! :)
               </li>
             </ul>
+
+            <b className="is-size-6">Accepted Payment Methods:</b>
+            <div>
+              Venmo:{" "}
+              <a href="https://account.venmo.com/u/brenton-yu" target="_blank">
+                @Brenton-Yu
+              </a>
+            </div>
+            <div>Apple Pay or Zelle: 650-580-6961</div>
           </section>
         </div>
       </div>

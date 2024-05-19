@@ -1,26 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
+import Hero from '../components/Hero.astro'
 import Services from '../components/Services.astro'
 import ServiceDetails from '../components/ServiceDetails.astro'
-import BookingModal from '../components/BookingModal'
-import Policy from '../components/Policy.astro'
 import About from '../components/About.astro'
+import Policy from '../components/Policy.astro'
 
 ---
 
 <Layout title="Brenton's Barkyard">
-	<section class="hero is-medium">
-		<div class="hero-body">
-			<div class="container has-text-centered">
-				<Image src="/brentonsbarkyard.github.io/logo.png" alt="logo" width="480" height="480" />
-			</div>
-			<div class="is-flex is-justify-content-center">
-				<BookingModal client:load btnClassNames="is-large mt-6" />
-			</div>
-		</div>
-	</section>
-
+	<Hero />
 	<Services />
 	<ServiceDetails />
 	<About />

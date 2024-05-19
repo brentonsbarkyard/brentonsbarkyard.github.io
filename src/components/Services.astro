@@ -1,11 +1,31 @@
 ---
 import PawIcon from '../components/PawIcon.astro'
 
+const SERVICES = [
+  {name: "Boarding overnight (24hr basis) *", smPrice: 70, mdLgPrice: 80},
+  {name: "Half extended stay (+4hrs)", smPrice: 35, mdLgPrice: 40},
+  {name: "Full extended stay (+8hrs)", smPrice: 70, mdLgPrice: 80},
+  {name: "Half daycare", smPrice: 35, mdLgPrice: 45},
+  {name: "Full daycare", smPrice: 45, mdLgPrice: 55},
+  {name: "Park visit", smPrice: 40, mdLgPrice: 40},
+  {name: "Drop-in visit/walks", smPrice: 40, mdLgPrice: 40},
+  {name: "Pickup *", smPrice: 20, mdLgPrice: 20},
+  {name: "Dropoff *", smPrice: 20, mdLgPrice: 20},
+]
+
+const EXTRAS = [
+  {name: "Airport drop-off/pick-up", price: 20},
+  {name: "Puppies under 1 years old", price: 10},
+  {name: "XL dogs (>120lbs)", price: 10},
+  {name: "Not fixed* (unneutered/unspayed)", price: 10},
+  {name: "Services past 6pm (after hours)", price: '5/hr'},
+  {name: "Extra care*", price: 40},
+]
 ---
 
 <section id="services" class="section banner is-flex is-flex-direction-column">
   <h1 class="title main-title is-flex is-justify-content-center">
-    <span class="mr-3">services & pricing</span>
+    <span class="mr-3 section-header">services & pricing</span>
     <PawIcon />
   </h1>
   <div class="section-content container">
@@ -18,111 +38,45 @@ import PawIcon from '../components/PawIcon.astro'
         </span>
       </p>
       <ul class="list">
-        <li>
-          <span>Boarding overnight (24hr basis) *</span>
-          <div class="prices">
-            <span>70</span>
-            <span>80</span>
-          </div>
-        </li>
-        <li>
-          <span>Half extended stay (+4hrs)</span>
-          <div class="prices">
-            <span>35</span>
-            <span>40</span>
-          </div>
-        </li>
-        <li>
-          <span>Full extended stay (+8hrs)</span>
-          <div class="prices">
-            <span>70</span>
-            <span>80</span>
-          </div>
-        </li>
-        <li>
-          <span>Half daycare</span>
-          <div class="prices">
-            <span>35</span>
-            <span>45</span>
-          </div>
-        </li>
-        <li>
-          <span>Full daycare</span>
-          <div class="prices">
-            <span>45</span>
-            <span>55</span>
-          </div>
-        </li>
-        <li>
-          <span>Park visit</span>
-          <div class="prices">
-            <span>40</span>
-            <span>40</span>
-          </div>
-        </li>
-        <li>
-          <span>Drop-in visit/walks</span>
-          <div class="prices">
-            <span>40</span>
-            <span>40</span>
-          </div>
-        </li>
-        <li>
-          <span>Pickup *</span>
-          <div class="prices">
-            <span>20</span>
-            <span>20</span>
-          </div>
-        </li>
-        <li>
-          <span>Dropoff *</span>
-          <div class="prices">
-            <span>20</span>
-            <span>20</span>
-          </div>
-        </li>
+        {SERVICES.map(({name, smPrice, mdLgPrice}) => {
+          return (
+            <li>
+              <span>{name}</span>
+              <div class="prices">
+                <span>{smPrice}</span>
+                <span>{mdLgPrice}</span>
+              </div>
+            </li>
+          )
+        })}
       </ul>
     </div>
     <br>
-    <p>* 7+ night stays will be discounted</p>
-    <p>* Minimum $20 within 5 miles, +3 per extra mile</p>
-    <p>* Facility with more than 6 pups may be subject to higher rates</p>
+    <p class="asterikText">
+      * 7+ night stays will be discounted
+      <br>
+      * Minimum $20 within 5 miles, +3 per extra mile
+      <br>
+      * Facility with more than 6 pups may be subject to higher rates
+    </p>
   </div>
 
   <div class="section-content extras container">
     <div>
-      <p class="list-header">
-        Extras
-      </p>
+      <p class="list-header">Extras</p>
       <ul class="list">
-        <li>
-          <span>Airport drop-off/pick-up</span>
-          <span>20</span>
-        </li>
-        <li>
-          <span>Puppies under 1 years old</span>
-          <span>10</span>
-        </li>
-        <li>
-          <span>XL dogs (>120lbs)</span>
-          <span>10</span>
-        </li>
-        <li>
-          <span>Not fixed* (unneutered/unspayed)</span>
-          <span>10</span>
-        </li>
-        <li>
-          <span>Services past 6pm (after hours)</span>
-          <span>5/hr</span>
-        </li>
-        <li>
-          <span>Extra care*</span>
-          <span>40</span>
-        </li>
+        {EXTRAS.map(({name, price}) => {
+          return (
+            <li>
+              <span>{name}</span>
+              <span>{price}</span>
+            </li>
+          )
+        })}
       </ul>
     </div>
     <br>
-    <p>* Added price per service</p>
+    <p class="asterikText">* Added price per service</p>
   </div>
 </section>
 
@@ -132,19 +86,45 @@ import PawIcon from '../components/PawIcon.astro'
     gap: 2rem;
 	}
 
+  .list-header {
+    @media (max-width: 600px) {
+      font-size: 1rem;
+    }
+  }
+
 
 	.list {
 		text-align: left;
 		font-size: 20px;
+    line-height: 1.75rem;
 
 		li {
+      padding: 2px;
 			display: flex;
 			justify-content: space-between;
+
+      &:hover {
+        background: #252525;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 0.8rem;
+      }
 		}
 	}
+
+  .asterikText {
+    @media (max-width: 600px) {
+      font-size: 0.8rem;
+    }
+  }
 
 	.prices {
 		display: flex;
 		gap: 4rem;
+
+    @media (max-width: 600px) {
+      gap: 2rem;
+    }
 	}
 </style>
