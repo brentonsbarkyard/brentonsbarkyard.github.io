@@ -8,10 +8,10 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
 
   return (
     <Fragment>
-      <div className={`modal ${isOpen ? "is-active" : ""}`}>
+      <div className={`modal ${isOpen ? "is-active" : ""} has-text-dark`}>
         <div className="modal-background" onClick={closeModal}></div>
         <div className="modal-card">
-          <header className="modal-card-head">
+          <header className="modal-card-head" style={{ padding: "1rem" }}>
             <p className="modal-card-title has-text-centered has-text-weight-bold">
               Booking Instructions
             </p>
@@ -24,11 +24,12 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
           <section
             className="modal-card-body"
             style={{
+              padding: "1.5rem",
               borderBottomLeftRadius: "var(--bulma-modal-card-head-radius)",
               borderBottomRightRadius: "var(--bulma-modal-card-head-radius)",
             }}
           >
-            <ul className="is-size-6 mb-6" style={{ listStyle: "none" }}>
+            <ul className="is-size-6 mb-4" style={{ listStyle: "none" }}>
               <li className="mb-2">
                 <b>Step 1:</b> Text <b>650-580-6961</b> or email{" "}
                 <a href="mailto:brentonsbarkyard@gmail.com">
