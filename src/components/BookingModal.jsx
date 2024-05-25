@@ -50,7 +50,7 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
                 <b>Step 2:</b> I will confirm the quote for your pup's services
               </li>
               <li className="mb-2">
-                <b>Step 3:</b> Send a deposit to secure the booking
+                <b>Step 3:</b> Send a 50% deposit to secure the booking
               </li>
               <li className="mb-2">
                 <b>Step 4:</b> Remaining payment will be due upon dropoff
