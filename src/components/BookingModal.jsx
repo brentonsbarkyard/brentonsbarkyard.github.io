@@ -42,7 +42,8 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
                   <li>Breed, size & age</li>
                   <li>Spayed / neutered status</li>
                   <li>Desired booking dates and dropoff time</li>
-                  <li>Any add-ons you'd like to include</li>
+                  <li>What services you'd like to include</li>
+                  <li>State that you agree to the "Terms & Conditions" </li>
                   <li>Any additional info you'd like for me to know!</li>
                 </ul>
               </li>
