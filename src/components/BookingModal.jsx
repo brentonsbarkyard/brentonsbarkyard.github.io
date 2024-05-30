@@ -43,7 +43,7 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
                   <li>Spayed / neutered status</li>
                   <li>Desired booking dates and dropoff time</li>
                   <li>What services you'd like to include</li>
-                  <li>State that you agree to the "Terms & Conditions" </li>
+                  <li>State that you agree to the Barkyard "Terms & Conditions" </li>
                   <li>Any additional info you'd like for me to know!</li>
                 </ul>
               </li>
