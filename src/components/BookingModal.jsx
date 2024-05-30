@@ -44,6 +44,7 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
                   <li>Desired booking dates and dropoff time</li>
                   <li>What services you'd like to include</li>
                   <li>State that you have read all of the Barkyard services and agree to the Barkyard "Terms & Conditions" </li>
+                  <li>Even without stating your agreement, Booking under Brenton's Barkyard you are automatically agreeing to all of Brenton's Barkyard policies and "Terms & Conditions" </li>
                   <li>Any additional info you'd like for me to know!</li>
                 </ul>
               </li>
