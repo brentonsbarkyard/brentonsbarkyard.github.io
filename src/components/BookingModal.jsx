@@ -10,7 +10,7 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
     <Fragment>
       <div className={`modal ${isOpen ? "is-active" : ""} has-text-dark`}>
         <div className="modal-background" onClick={closeModal}></div>
-        <div className="modal-card">
+        <div className="modal-card" style={{ height: "85vh" }}>
           <header className="modal-card-head" style={{ padding: "1rem" }}>
             <p className="modal-card-title has-text-centered has-text-weight-bold">
               Booking Instructions
@@ -30,39 +30,23 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
             }}
           >
             <ul className="is-size-6 mb-4" style={{ listStyle: "none" }}>
-              <li className="mb-2">
-                <b>Step 1:</b> Text <b>650-580-6961</b> or email{" "}
-                <a href="mailto:brentonsbarkyard@gmail.com">
-                  brentonsbarkyard@gmail.com
-                </a>{" "}
-                with:
-                <ul style={{ listStyle: "inside" }} className="ml-5 is-size-6">
-                  <li>Your name</li>
-                  <li>Your pet's name</li>
-                  <li>Breed, size & age</li>
-                  <li>Spayed / neutered status</li>
-                  <li>Desired booking dates and dropoff time</li>
-                  <li>What services you'd like to include</li>
-                  <li>State that you have read all of the Barkyard services and agree to the Barkyard "Terms & Conditions" </li>
-                  <li>Even without stating your agreement, Booking under Brenton's Barkyard you are automatically agreeing to all of Brenton's Barkyard policies and "Terms & Conditions" </li>
-                  <li>Any additional info you'd like for me to know!</li>
-                </ul>
+              <li className="mb-1">
+                <b>Step 1:</b> Fill out the form below
               </li>
-              <li className="mb-2">
+              <li className="mb-1">
                 <b>Step 2:</b> I will confirm the quote for your pup's services
               </li>
-              <li className="mb-2">
+              <li className="mb-1">
                 <b>Step 3:</b> Send a 50% deposit to secure the booking
               </li>
-              <li className="mb-2">
+              <li className="mb-1">
                 <b>Step 4:</b> Remaining payment will be due upon dropoff
               </li>
-              <li className="mb-2">
+              <li className="mb-1">
                 <b>Step 5:</b> Feel relieved that your pup will be in great
                 care! :)
               </li>
             </ul>
-
             <b className="is-size-6">Accepted Payment Methods:</b>
             <div>
               Venmo:{" "}
@@ -71,6 +55,13 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
               </a>
             </div>
             <div>Apple Pay or Zelle: 650-580-6961</div>
+
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfYV-TSZBtfrHaSzpW-aRpJhVZF4d12pbG37n2TFSgqkTp89w/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link"
+              sandbox="allow-same-origin allow-top-navigation-by-user-activation"
+              style={{ border: 0, height: "100%", marginTop: "2rem" }}
+              width="100%"
+            />
           </section>
         </div>
       </div>
