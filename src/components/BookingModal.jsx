@@ -10,7 +10,7 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
     <Fragment>
       <div className={`modal ${isOpen ? "is-active" : ""} has-text-dark`}>
         <div className="modal-background" onClick={closeModal}></div>
-        <div className="modal-card" style={{ height: "85vh" }}>
+        <div className="modal-card" style={{ height: "95vh" }}>
           <header className="modal-card-head" style={{ padding: "1rem" }}>
             <p className="modal-card-title has-text-centered has-text-weight-bold">
               Booking Instructions
@@ -57,11 +57,14 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
             <div>Apple Pay or Zelle: 650-580-6961</div>
 
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfYV-TSZBtfrHaSzpW-aRpJhVZF4d12pbG37n2TFSgqkTp89w/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link"
-              sandbox="allow-same-origin allow-top-navigation-by-user-activation"
-              style={{ border: 0, height: "100%", marginTop: "2rem" }}
-              width="100%"
-            />
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfYV-TSZBtfrHaSzpW-aRpJhVZF4d12pbG37n2TFSgqkTp89w/viewform?embedded=true"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              style={{ width: "100%", height: "100%", marginTop: "2rem" }}
+            >
+              Loading…
+            </iframe>
           </section>
         </div>
       </div>
