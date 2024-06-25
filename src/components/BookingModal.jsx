@@ -34,16 +34,15 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
                 <b>Step 1:</b> Fill out the form below
               </li>
               <li className="mb-1">
-                <b>Step 2:</b> I will confirm the quote for your pup's services
+                <b>Step 2:</b> I will reach out with a quote for your pup's
+                services
               </li>
               <li className="mb-1">
-                <b>Step 3:</b> Send a 50% deposit to secure the booking
+                <b>Step 3:</b> Send a 50% deposit to secure the booking.
+                Remaining payment will be due upon dropoff.
               </li>
               <li className="mb-1">
-                <b>Step 4:</b> Remaining payment will be due upon dropoff
-              </li>
-              <li className="mb-1">
-                <b>Step 5:</b> Feel relieved that your pup will be in great
+                <b>Step 4:</b> Feel relieved that your pup will be in great
                 care! :)
               </li>
             </ul>
@@ -54,7 +53,9 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
                 @Brenton-Yu
               </a>
             </div>
-            <div>Apple Pay or Zelle: 650-580-6961</div>
+            <div>
+              Apple Pay or Zelle: <a href="tel:+16505806961">650-580-6961</a>
+            </div>
 
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSfYV-TSZBtfrHaSzpW-aRpJhVZF4d12pbG37n2TFSgqkTp89w/viewform?embedded=true"
