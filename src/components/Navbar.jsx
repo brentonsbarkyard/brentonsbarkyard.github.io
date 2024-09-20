@@ -30,10 +30,11 @@ const Navbar = () => {
           <a
             href="https://instagram.com/brentons_barkyard"
             target="_blank"
-            className="is-flex is-align-items-center ml-3 mr-3 "
+            className="is-flex is-align-items-center ml-3"
           >
             <InstagramIcon />
           </a>
+          <div className="navbar-item">Brenton's Barkyard</div>
           <a
             role="button"
             onClick={toggleMenu}
