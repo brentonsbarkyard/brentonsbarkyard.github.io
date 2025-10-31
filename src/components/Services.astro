@@ -46,7 +46,7 @@ const EXTRAS = [
             <li>
               <span>{name}</span>
               <div class="prices">
-                <span>{smPrice}</span>
+                <span class={smPrice > 99 ? "high-price" : ''}>{smPrice}</span>
                 <span>{mdLgPrice}</span>
               </div>
             </li>
@@ -104,7 +104,7 @@ const EXTRAS = [
 		li {
       padding: 2px;
 			display: flex;
-			justify-content: space-between;
+
 
       &:hover {
         background: #252525;
@@ -126,8 +126,16 @@ const EXTRAS = [
 		display: flex;
 		gap: 4rem;
 
+    .high-price {
+      max-width: 21px;
+    }
+
     @media (max-width: 600px) {
       gap: 2rem;
+
+      .high-price {
+        max-width: 16px;
+      }
     }
 	}
 </style>
