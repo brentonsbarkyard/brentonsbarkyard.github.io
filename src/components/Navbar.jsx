@@ -52,7 +52,14 @@ const Navbar = () => {
 
         <div className={`navbar-menu ${menuClass}`}>
           <div className="navbar-end">
-            <BookingModal isNavItem={true} />
+            <a
+              className="navbar-item"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfYV-TSZBtfrHaSzpW-aRpJhVZF4d12pbG37n2TFSgqkTp89w/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book
+            </a>
             <div className="navbar-item has-dropdown is-hoverable">
               <a className="navbar-link" onClick={() => scrollTo("services")}>
                 Services

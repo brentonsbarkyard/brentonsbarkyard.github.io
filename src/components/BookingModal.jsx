@@ -58,7 +58,7 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
             </div>
 
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfYV-TSZBtfrHaSzpW-aRpJhVZF4d12pbG37n2TFSgqkTp89w/viewform?embedded=true"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfYV-TSZBtfrHaSzpW-aRpJhVZF4d12pbG37n2TFSgqkTp89w/viewform"
               frameborder="0"
               marginheight="0"
               marginwidth="0"
@@ -75,12 +75,15 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
           Book
         </a>
       ) : (
-        <button
-          onClick={openModal}
-          className={`button is-dark is-rounded ${btnClassNames}`}
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfYV-TSZBtfrHaSzpW-aRpJhVZF4d12pbG37n2TFSgqkTp89w/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Book Now!
-        </button>
+          <button className={`button is-dark is-rounded ${btnClassNames}`}>
+            Book Now!
+          </button>
+        </a>
       )}
     </Fragment>
   );
