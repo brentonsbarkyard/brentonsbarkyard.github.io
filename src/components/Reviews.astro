@@ -40,7 +40,7 @@ const REVIEWS = [
             <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
             <p class="review-text">"{review.text}"</p>
             <p class="reviewer-name">— {review.name}</p>
-            <a href={review.link} target="_blank" rel="noopener" class="google-link">
+            <a href={review.link} target="_blank" rel="noopener" class="review-link">
               <GoogleIcon width="14" height="14" />
               Read on Google
             </a>
@@ -52,15 +52,15 @@ const REVIEWS = [
           <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p class="cta-heading">Check out the rest of my reviews!</p>
           <div class="cta-buttons">
-            <a href="https://share.google/ceLf7vjRbfEqdyyKC" target="_blank" rel="noopener" class="google-link google-link--large blue">
+            <a href="https://share.google/ceLf7vjRbfEqdyyKC" target="_blank" rel="noopener" class="review-link review-link--large blue">
               <GoogleIcon width="18" height="18" />
               Google
             </a>
-            <a href="https://www.rover.com/members/brenton-y-spacious-yard-in-downtown-millbrae/" target="_blank" rel="noopener" class="google-link google-link--large rover-link">
+            <a href="https://www.rover.com/members/brenton-y-spacious-yard-in-downtown-millbrae/" target="_blank" rel="noopener" class="review-link review-link--large rover-link">
               <RoverIcon width="18" height="18" />
               Rover
             </a>
-            <a href="https://www.yelp.com/biz/brenton-s-barkyard-millbrae#reviews" target="_blank" rel="noopener" class="google-link google-link--large yelp-link">
+            <a href="https://www.yelp.com/biz/brenton-s-barkyard-millbrae#reviews" target="_blank" rel="noopener" class="review-link review-link--large yelp-link">
               <YelpIcon width="18" height="18" />
               Yelp
             </a>
@@ -195,13 +195,13 @@ const REVIEWS = [
     margin-top: 0.5rem;
   }
 
-  .google-link--large {
+  .review-link--large {
     font-size: 0.95rem;
     padding: 0.65rem 1.5rem;
     margin-top: 0.5rem;
   }
 
-  .google-link {
+  .review-link {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
@@ -211,14 +211,13 @@ const REVIEWS = [
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.5px;
-    padding: 0.45rem 1rem;
+    padding: .5rem 1rem;
     border-radius: 999px;
     text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
+    transition: background 0.2s;
 
     &:hover {
       background: #764a03;
-      transform: translateY(-1px);
     }
   }
 
