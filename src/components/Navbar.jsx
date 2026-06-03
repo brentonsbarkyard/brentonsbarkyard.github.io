@@ -1,5 +1,5 @@
 import { useState } from "react";
-import BookingModal from "./BookingModal";
+// import BookingModal from "./BookingModal";
 import InstagramIcon from "./InstagramIcon";
 
 const Navbar = () => {
@@ -111,6 +111,9 @@ const Navbar = () => {
 
             <a className="navbar-item" onClick={() => scrollTo("about")}>
               About
+            </a>
+            <a className="navbar-item" onClick={() => scrollTo("reviews")}>
+              Reviews
             </a>
           </div>
         </div>
