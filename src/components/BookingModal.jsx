@@ -60,8 +60,8 @@ const BookingModal = ({ isNavItem = false, btnClassNames = "" }) => {
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSfYV-TSZBtfrHaSzpW-aRpJhVZF4d12pbG37n2TFSgqkTp89w/viewform"
               frameborder="0"
-              marginheight="0"
-              marginwidth="0"
+              // marginheight="0"
+              // marginwidth="0"
               style={{ width: "100%", height: "100%", marginTop: "2rem" }}
             >
               Loading…
